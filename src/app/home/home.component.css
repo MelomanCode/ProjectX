@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #d1f8f0;
+}
+
+.wrapper {
+  background-color: #141414;
+  width: 780px;
+  border-radius: 20px;
+  padding: 35px 40px;
+}
+
+.wrapper header {
+  color: #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.piano-keys .key {
+  list-style: none;
+  color: #a2a2a2;
+}
