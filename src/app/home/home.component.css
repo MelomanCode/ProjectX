@@ -19,6 +19,44 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+header .colum {
+  display: flex;
+  align-items: center;
+}
+
+header .colum span {
+  font-weight: 500;
+margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.value-slider input {
+  accent-color: #fafafa;
+}
+
+.keys-checkbox input {
+  width: 60px;
+  height: 30px;
+  background-color: #4b4b4b;
+  border-radius: 30px;
+  position: relative;
+  appearance: none;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: inherit;
+  background: #8c8c8c;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+
 .piano-keys .key {
   list-style: none;
   color: #a2a2a2;
