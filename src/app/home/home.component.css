@@ -87,7 +87,8 @@ margin-right: 15px;
 }
 
 .piano-keys .white:active {
-  background: #dcdada;
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(to bottom, #fff, #eee 100%);
 }
 
 .piano-keys .black {
@@ -100,7 +101,8 @@ margin-right: 15px;
 }
 
 .piano-keys .black:active {
-  background: #1a1919;
+  box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
+  background: linear-gradient(to bottom, #000, #434343);
 }
 
 .piano-keys span {
