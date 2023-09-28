@@ -7,5 +7,15 @@ import { pianoKeys } from '../constances/piano-keys.constance';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
- keys: { label: string, isBlack: boolean }[] = pianoKeys
+  keys: { label: string; isBlack: boolean }[] = pianoKeys;
+
+  playSound(note: string) {
+    const audio = new Audio(`./assets/samples/${note}.mp3`);
+    audio.play().then(() => {
+      //
+      })
+      .catch(error => {
+        console.error('Произошла ошибка при воспроизведении аудио:', error);
+      });
+  }
 }
