@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { pianoKeys } from '../constances/piano-keys.constance';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-
+ keys: { label: string, isBlack: boolean }[] = pianoKeys
 }
