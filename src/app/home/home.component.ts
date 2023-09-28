@@ -11,11 +11,8 @@ export class HomeComponent {
 
   playSound(note: string) {
     const audio = new Audio(`./assets/samples/${note}.mp3`);
-    audio.play().then(() => {
-      //
-      })
-      .catch(error => {
-        console.error('Произошла ошибка при воспроизведении аудио:', error);
+    audio.play().catch(error => {
+        console.error('ERROR, DESTROY YOUR COMPUTER', error);
       });
   }
 }
