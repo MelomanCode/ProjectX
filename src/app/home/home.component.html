@@ -17,18 +17,19 @@
         <span>Show Keys</span>
         <input
           type="checkbox"
+          (change)='toggleKeysVisibility()'
           checked
         />
       </div>
     </header>
-    <ul class="piano-keys">
+    <ul class="piano-keys ">
       <li
         *ngFor="let key of keys"
-        [ngClass]="{ key: true, white: !key.isBlack, black: key.isBlack }"
+        [ngClass]="{ key: true, white: !key.isBlack, black: key.isBlack}"
         (click)="playSound(key.label)"
       >
-        <span *ngIf="!key.isBlack">{{ key.label }}</span>
-        <span *ngIf="key.isBlack">{{ key.label }}</span>
+        <span *ngIf="!key.isBlack" [ngClass]='{hide: !showKeys }'>{{ key.label }}</span>
+        <span *ngIf="key.isBlack" [ngClass]='{hide: !showKeys }' >{{ key.label }}</span>
       </li>
     </ul>
   </div>
