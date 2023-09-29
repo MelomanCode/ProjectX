@@ -3,7 +3,15 @@
     <header>
       <h2>Meloman's Piano</h2>
       <div class="colum value-slider">
-        <span>Volume</span> <input type="range" />
+        <span>Volume</span>
+        <input
+          type="range"
+          (input)="volumeChange($event)"
+          min='0'
+          max='1'
+          step='any'
+          value='0.5'
+        />
       </div>
       <div class="colum keys-checkbox">
         <span>Show Keys</span>
