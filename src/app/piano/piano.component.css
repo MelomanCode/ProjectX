@@ -2,13 +2,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 1680px;
   min-height: 100vh;
   background-color: #f6abab;
 }
 
 .wrapper {
   background-color: #141414;
-  width: 100%;
+  width: 95%;
   border-radius: 20px;
   padding: 10px 10px;
 }
@@ -87,6 +88,7 @@ header .colum span {
   height: 230px;
   border-radius: 0 0 8px 8px;
   border: 1px solid #000;
+  border-right: none;
   background: linear-gradient(#fff 96%, #eee 4%);
 }
 
@@ -120,3 +122,15 @@ header .colum span {
 .hide {
   display: none;
 }
+
+.active-white {
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(to bottom, #fff, #eee 100%);
+}
+
+.active-black {
+  box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+
