@@ -1,0 +1,122 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f6abab;
+}
+
+.wrapper {
+  background-color: #141414;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+.wrapper header {
+  color: #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .colum {
+  display: flex;
+  align-items: center;
+}
+
+header .colum span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.value-slider input {
+  accent-color: #fafafa;
+  outline: none;
+}
+
+.keys-checkbox input {
+  width: 60px;
+  height: 30px;
+  background-color: #4b4b4b;
+  border-radius: 30px;
+  position: relative;
+  appearance: none;
+  outline: none;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: inherit;
+  background: #8c8c8c;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: #a2a2a2;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.piano-keys .white {
+  width: 51px;
+  height: 230px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piano-keys .white:active {
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(to bottom, #fff, #eee 100%);
+}
+
+.piano-keys .black {
+  width: 34px;
+  height: 140px;
+  margin: 0 -15px 0 -15px;
+  z-index: 2;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys .black:active {
+  box-shadow: inset -5px 5px 10px rgba(255,255,255,0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}

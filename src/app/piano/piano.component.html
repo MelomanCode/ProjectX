@@ -1,0 +1,36 @@
+<body>
+<div class="wrapper">
+  <header>
+    <h2>Meloman's Piano</h2>
+    <div class="colum value-slider">
+      <span>Volume</span>
+      <input
+        type="range"
+        (input)="volumeChange($event)"
+        min='0'
+        max='1'
+        step='any'
+        value='0.5'
+      />
+    </div>
+    <div class="colum keys-checkbox">
+      <span>Show Keys</span>
+      <input
+        type="checkbox"
+        (change)='toggleKeysVisibility()'
+        checked
+      />
+    </div>
+  </header>
+  <ul class="piano-keys ">
+    <li
+      *ngFor="let key of keys"
+      [ngClass]="{ key: true, white: !key.isBlack, black: key.isBlack}"
+      (click)="playSound(key.label)"
+    >
+      <span *ngIf="!key.isBlack" [ngClass]='{hide: !showKeys }'>{{ key.label }}</span>
+      <span *ngIf="key.isBlack" [ngClass]='{hide: !showKeys }' >{{ key.label }}</span>
+    </li>
+  </ul>
+</div>
+</body>
