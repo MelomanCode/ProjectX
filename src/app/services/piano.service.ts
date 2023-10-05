@@ -19,8 +19,13 @@ export class PianoService {
       case 'b': return pianoKeys.find(value => value.label === 'G1')?.label || ''
       case 'h': return pianoKeys.find(value => value.label === 'G$1')?.label || ''
       case 'n': return pianoKeys.find(value => value.label === 'A1')?.label || ''
-      case 'm': return pianoKeys.find(value => value.label === 'A$1')?.label || ''
-      case ',': return pianoKeys.find(value => value.label === 'H1')?.label || ''
+      case 'j': return pianoKeys.find(value => value.label === 'A$1')?.label || ''
+      case 'm': return pianoKeys.find(value => value.label === 'H1')?.label || ''
+      case 'q': return pianoKeys.find(value => value.label === 'C2')?.label || ''
+      case '2': return pianoKeys.find(value => value.label === 'C$2')?.label || ''
+      case 'w': return pianoKeys.find(value => value.label === 'D2')?.label || ''
+      case '3': return pianoKeys.find(value => value.label === 'D$2')?.label || ''
+      case 'e': return pianoKeys.find(value => value.label === 'E2')?.label || ''
       default:  return ''
     }
   }
